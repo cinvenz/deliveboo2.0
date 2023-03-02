@@ -25,8 +25,8 @@ class CreateUsersTable extends Migration
             $table->string('address', 200);
             $table->string('phone', 20)->unique()->nullable();
             $table->decimal('delivery_cost', 9, 2)->default(0)->nullable();
-            $table->time('opening_hours')->nullable()->nullable();
-            $table->time('closing_hours')->nullable()->nullable();
+            $table->time('opening_hours')->format('H:i')->nullable();
+            $table->time('closing_hours')->format('H:i')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -56,8 +56,8 @@
                     </thead>
                     <tbody>
                         <tr v-for="(dish, index) in cart" :key="index">
-                            <td>{{ dish.nome }}</td>
-                            <td>{{ dish.prezzo }}</td>
+                            <td>{{ dish.dish_name }}</td>
+                            <td>{{ dish.price }}</td>
                             <td>
                                 <button
                                     class="btn btn-sm btn-danger"

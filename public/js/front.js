@@ -3951,7 +3951,7 @@ var render = function render() {
   }, [_vm._m(0), _vm._v(" "), _c("tbody", [_vm._l(_vm.cart, function (dish, index) {
     return _c("tr", {
       key: index
-    }, [_c("td", [_vm._v(_vm._s(dish.nome))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(dish.prezzo))]), _vm._v(" "), _c("td", [_c("button", {
+    }, [_c("td", [_vm._v(_vm._s(dish.dish_name))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(dish.price))]), _vm._v(" "), _c("td", [_c("button", {
       staticClass: "btn btn-sm btn-danger",
       on: {
         click: function click($event) {
