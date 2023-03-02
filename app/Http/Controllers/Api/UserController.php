@@ -20,7 +20,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::inRandomOrder()->limit(9)->get();
+        $users = User::inRandomOrder()->limit(8)->get();
 
         return response()->json([
             'success' => true,
