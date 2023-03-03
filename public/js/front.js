@@ -3604,13 +3604,7 @@ var render = function render() {
         name: "home"
       }
     }
-  }, [_c("img", {
-    staticClass: "immaginenav",
-    attrs: {
-      src: __webpack_require__(/*! ../../img/Risorsa-7.png */ "./resources/img/Risorsa-7.png"),
-      alt: ""
-    }
-  })]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
     staticClass: "collapse navbar-collapse",
     attrs: {
       id: "navbarSupportedContent"
@@ -3649,9 +3643,23 @@ var render = function render() {
     attrs: {
       icon: "fa-solid fa-magnifying-glass"
     }
-  })], 1)])]), _vm._v(" "), _vm._m(1)])]), _vm._v(" "), _vm._m(2)]);
+  })], 1)])]), _vm._v(" "), _vm._m(2)])]), _vm._v(" "), _vm._m(3)]);
 };
 var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("a", {
+    attrs: {
+      href: "http://localhost:8000/"
+    }
+  }, [_c("img", {
+    staticClass: "immaginenav",
+    attrs: {
+      src: __webpack_require__(/*! ../../img/Risorsa-7.png */ "./resources/img/Risorsa-7.png"),
+      alt: ""
+    }
+  })]);
+}, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("button", {

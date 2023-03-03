@@ -3,12 +3,14 @@
         <div class="navvv">
             <div class="navsup">
                 <div class="contain1">
-                    <router-link :to="{ name: 'home' }" class="navbar-brand"
-                        ><img
-                            class="immaginenav"
-                            src="../../img/Risorsa-7.png"
-                            alt=""
-                    /></router-link>
+                    <router-link :to="{ name: 'home' }" class="navbar-brand"></router-link>
+                        <a href="http://localhost:8000/"
+                            ><img
+                                class="immaginenav"
+                                src="../../img/Risorsa-7.png"
+                                alt=""
+                        /></a>
+                    </router-link>
                     <button
                         class="navbar-toggler"
                         type="button"
