@@ -31,6 +31,12 @@
                                     {{ user.closing_hours }}
                                 </p>
                                 <p><b>Tel:</b> {{ user.phone }}</p>
+                                <p
+                                    v-for="category in arrCategories"
+                                    :key="category.id"
+                                >
+                                    {{ category.name }}
+                                </p>
                             </div>
                         </div>
                     </router-link>
@@ -102,12 +108,17 @@ export default {
     data() {
         return {
             arrUsers: null,
+            arrCategories: null,
         };
     },
     created() {
         axios
             .get("/api/users")
             .then((response) => (this.arrUsers = response.data.results));
+
+        axios
+            .get("/api/categories")
+            .then((response) => (this.arrCategories = response.data.results));
     },
 };
 </script>

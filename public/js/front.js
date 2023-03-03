@@ -3322,13 +3322,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      arrUsers: null
+      arrUsers: null,
+      arrCategories: null
     };
   },
   created: function created() {
     var _this = this;
     axios.get("/api/users").then(function (response) {
       return _this.arrUsers = response.data.results;
+    });
+    axios.get("/api/categories").then(function (response) {
+      return _this.arrCategories = response.data.results;
     });
   }
 });
@@ -3833,7 +3837,11 @@ var render = function render() {
       }
     })]), _vm._v(" "), _c("div", {
       staticClass: "cont2"
-    }, [_c("h4", [_vm._v(_vm._s(user.restaurant_name))]), _vm._v(" "), _c("p", [_c("b", [_vm._v(" Via:")]), _vm._v(" " + _vm._s(user.address))]), _vm._v(" "), _c("p", [_c("b", [_vm._v(" Orario apertura:")]), _vm._v("\n                                " + _vm._s(user.opening_hours) + "\n                            ")]), _vm._v(" "), _c("p", [_c("b", [_vm._v(" Orario chiusura:")]), _vm._v("\n                                " + _vm._s(user.closing_hours) + "\n                            ")]), _vm._v(" "), _c("p", [_c("b", [_vm._v("Tel:")]), _vm._v(" " + _vm._s(user.phone))])])])])], 1);
+    }, [_c("h4", [_vm._v(_vm._s(user.restaurant_name))]), _vm._v(" "), _c("p", [_c("b", [_vm._v(" Via:")]), _vm._v(" " + _vm._s(user.address))]), _vm._v(" "), _c("p", [_c("b", [_vm._v(" Orario apertura:")]), _vm._v("\n                                " + _vm._s(user.opening_hours) + "\n                            ")]), _vm._v(" "), _c("p", [_c("b", [_vm._v(" Orario chiusura:")]), _vm._v("\n                                " + _vm._s(user.closing_hours) + "\n                            ")]), _vm._v(" "), _c("p", [_c("b", [_vm._v("Tel:")]), _vm._v(" " + _vm._s(user.phone))]), _vm._v(" "), _vm._l(_vm.arrCategories, function (category) {
+      return _c("p", {
+        key: category.id
+      }, [_vm._v("\n                                " + _vm._s(category.name) + "\n                            ")]);
+    })], 2)])])], 1);
   }), 0), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c("FooterComponent")], 1);
 };
 var staticRenderFns = [function () {
