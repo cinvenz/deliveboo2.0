@@ -1,6 +1,7 @@
 <template>
     <div>
         <NavBar />
+
         <HeroComponent />
         <!-- Page Content-->
         <section class="pt-5 mt-5">
@@ -31,6 +32,7 @@
                                     class="card-img-top img-fluid"
                                 />
                             </div>
+
                             <h2
                                 class="fs-4 fw-bold"
                                 style="color: #333; font-size: 24px"
@@ -75,12 +77,25 @@ export default {
     data() {
         return {
             arrUsers: null,
+            arrCategories: null,
+            searchQuery: "",
         };
     },
     created() {
         axios
             .get("/api/users")
             .then((response) => (this.arrUsers = response.data.results));
+
+        // axios
+        //     .get("/api/categories")
+        //     .then((response) => (this.arrCategories = response.data.results));
+    },
+    methods: {
+        search() {
+            axios
+                .get(`/api/users?search=${this.searchQuery}`)
+                .then((response) => (this.arrUsers = response.data.results));
+        },
     },
 };
 </script>

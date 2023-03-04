@@ -6,6 +6,8 @@ import VueRouter from "vue-router"; // importazione vue-router
 import PageHome from "./pages/PageHome";
 import PageRestaurant from "./pages/PageRestaurant";
 import PageDish from "./pages/PageDish";
+import PageSearch from "./pages/PageSearch";
+
 import vueBraintree from "vue-braintree";
 Vue.use(vueBraintree);
 Vue.use(VueRouter);
@@ -26,6 +28,12 @@ const routes = [
         path: "/dishes/:id",
         name: "dishShow",
         component: PageDish,
+        props: true,
+    },
+    {
+        path: "/search",
+        name: "pageSearch",
+        component: PageSearch,
         props: true,
     },
 ];

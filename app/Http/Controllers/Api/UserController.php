@@ -20,7 +20,16 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::inRandomOrder()->limit(9)->get();
+        // $users = User::inRandomOrder()->limit(8)->get();
+
+        $users = User::select('users.*')
+            ->with('categories')
+            ->join('category_user','category_user.user_id','=','users.id')
+            ->join('categories','categories.id','=','category_user.category_id')
+
+            ->orderBy('categories.id')
+            ->limit(8)
+            ->get();
 
         return response()->json([
             'success' => true,
@@ -38,13 +47,6 @@ class UserController extends Controller
             'results' => $user,
         ]);
 
-        $user = User::where('id', $user->id)->with(['category'])->first();
-
-        return response()->json([
-            'success' => true,
-            'results' => $user,
-        ]);
-
 
     }
 
@@ -54,6 +56,58 @@ class UserController extends Controller
         return response()->json([
             'success' => true,
             'results' => $users,
+        ]);
+    }
+
+    //  public function search(Request $request)
+    // {
+    //     $query = User::query();
+    //         // Verifica se è stata fornita una specializzazione
+    //     if ($request->has('category')) {
+    //         $category = $request->input('category');
+    //         // Filtra i dottori in base alla specializzazione
+    //         $query->whereHas('categories', function($q) use ($category) {
+    //             $q->where('name', "%{$category}%");
+    //         });
+    //     }
+    //     // Recupera tutti i dottori con le rispettive specializzazioni
+    //     $users =$query->select('users.*')
+    //     ->with(['categories'])
+    //     ->leftJoin('category_user', 'category_user.user_id', '=', 'users.id')
+    //     ->leftJoin('categories','categories.id','=','category_user.category_id')
+    //     // ->orderByRaw("CASE WHEN expiring_date > NOW() THEN 0 ELSE 1 END ASC")
+    //     ->orderBy('categories.id', 'desc')
+    //     ->get();
+    //     // Restituisci i dati in formato JSON
+    //     return response()->json([
+    //         'success' => true,
+    //         'results' => $users
+    //     ]);
+    // }
+
+ public function search(Request $request)
+    {
+        $query = User::query();
+            // Verifica se è stata fornita una specializzazione
+        if ($request->has('category')) {
+            $category = $request->input('category');
+            // Filtra i dottori in base alla specializzazione
+            $query->whereHas('categories', function($q) use ($category) {
+                $q->where('name','like', "%{$category}%");
+            });
+        }
+        // Recupera tutti i dottori con le rispettive specializzazioni
+        $users =$query->select('users.*')
+        ->with('categories')
+        ->leftJoin('category_user','category_user.user_id','=','users.id')
+        ->leftJoin('categories','categories.id','=','category_user.category_id')
+        // ->orderByRaw("CASE WHEN expiring_date > NOW() THEN 0 ELSE 1 END ASC")
+        // ->orderBy('sponsors.id', 'desc')
+        ->get();
+        // Restituisci i dati in formato JSON
+        return response()->json([
+            'success' => true,
+            'results' => $users
         ]);
     }
 
