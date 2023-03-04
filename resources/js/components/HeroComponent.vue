@@ -13,7 +13,9 @@
     >
         <div class="container text-white">
             <h1 class="display-4">Cerca i tuoi ristoranti preferiti</h1>
-            <button class="button-86" role="button">Cerca</button>
+            <router-link :to="{ name: 'pageSearch' }">
+                <button class="button-86" role="button">Cerca</button>
+            </router-link>
         </div>
     </div>
 </template>
@@ -31,7 +33,9 @@ export default {};
     height: 100%;
     text-align: center; /* center the text horizontally */
 }
-
+a{
+    u
+}
 @media (max-width: 768px) {
     /* adjust the font size for smaller screens */
     .container {
