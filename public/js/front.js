@@ -37007,23 +37007,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n/*!\n * Bootstrap
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/HeroComponent.vue?vue&type=style&index=0&id=3c6e1848&lang=scss&scoped=true& ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".container[data-v-3c6e1848] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n  text-align: center; /* center the text horizontally */\n}\n@media (max-width: 768px) {\n  /* adjust the font size for smaller screens */\n.container[data-v-3c6e1848] {\n    font-size: 24px;\n}\n}\n.button-86[data-v-3c6e1848] {\n  all: unset;\n  width: 100px;\n  height: 30px;\n  font-size: 16px;\n  background: transparent;\n  border: none;\n  position: relative;\n  color: #f0f0f0;\n  cursor: pointer;\n  z-index: 1;\n  padding: 10px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  white-space: nowrap;\n  -moz-user-select: none;\n       user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n}\n.button-86[data-v-3c6e1848]::after,\n.button-86[data-v-3c6e1848]::before {\n  content: \"\";\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  z-index: -99999;\n  transition: all 0.4s;\n}\n.button-86[data-v-3c6e1848]::before {\n  transform: translate(0%, 0%);\n  width: 100%;\n  height: 100%;\n  background: #133846;\n  border-radius: 10px;\n}\n.button-86[data-v-3c6e1848]::after {\n  transform: translate(10px, 10px);\n  width: 35px;\n  height: 35px;\n  background: rgba(255, 255, 255, 0.0823529412);\n  backdrop-filter: blur(5px);\n  -webkit-backdrop-filter: blur(5px);\n  border-radius: 50px;\n}\n.button-86[data-v-3c6e1848]:hover::before {\n  transform: translate(5%, 20%);\n  width: 110%;\n  height: 110%;\n}\n.button-86[data-v-3c6e1848]:hover::after {\n  border-radius: 10px;\n  transform: translate(0, 0);\n  width: 100%;\n  height: 100%;\n}\n.button-86[data-v-3c6e1848]:active::after {\n  transition: 0s;\n  transform: translate(0, 5%);\n}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
+throw new Error("Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n   ╷\n11 │     u\n   │      ^\n   ╵\n  /Users/peterpozo/Documents/Boolean/Final Project/Deliveboo/deliveboo2.0/resources/js/components/HeroComponent.vue 11:6  root stylesheet");
 
 /***/ }),
 
