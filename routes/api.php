@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/users', 'Api\UserController@index')->name('users.index');
-Route::get('/categories', 'Api\CategoryController@index');
+Route::get('/users/search', 'Api\UserController@search')->name('users.search');
 Route::get('/users/{user}', 'Api\UserController@show')->name('users.show');
 Route::get('/users/{user}/dishes', 'Api\DishController@dishes')->name('users.dishes');
 

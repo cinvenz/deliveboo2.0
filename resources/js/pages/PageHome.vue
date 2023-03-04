@@ -1,6 +1,10 @@
 <template>
     <div>
         <NavBar />
+        <div class="search-container">
+            <input type="text" placeholder="Search" v-model="searchQuery" />
+            <button @click="search">Search</button>
+        </div>
         <div class="container">
             <div class="sium">
                 <div v-for="user in arrUsers" :key="user.id" class="contgen">
@@ -32,7 +36,7 @@
                                 </p>
                                 <p><b>Tel:</b> {{ user.phone }}</p>
                                 <p
-                                    v-for="category in arrCategories"
+                                    v-for="category in user.categories"
                                     :key="category.id"
                                 >
                                     {{ category.name }}
@@ -109,6 +113,7 @@ export default {
         return {
             arrUsers: null,
             arrCategories: null,
+            searchQuery: "",
         };
     },
     created() {
@@ -116,9 +121,16 @@ export default {
             .get("/api/users")
             .then((response) => (this.arrUsers = response.data.results));
 
-        axios
-            .get("/api/categories")
-            .then((response) => (this.arrCategories = response.data.results));
+        // axios
+        //     .get("/api/categories")
+        //     .then((response) => (this.arrCategories = response.data.results));
+    },
+    methods: {
+        search() {
+            axios
+                .get(`/api/users?search=${this.searchQuery}`)
+                .then((response) => (this.arrUsers = response.data.results));
+        },
     },
 };
 </script>

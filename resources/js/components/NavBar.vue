@@ -37,20 +37,27 @@
                     </div>
                 </div>
                 <div class="contain2">
+
                     <form class="d-flex" role="search">
-                        <input
-                            class="form-control me-2"
-                            type="search"
-                            placeholder="Cerca"
-                            aria-label="Search"
-                        />
+                         <input
+            type="search"
+            class="col-12 py-2 text-center my-4 rounded"
+            v-model="specialization"
+            @keyup="searchDoctors"
+            name="doctorsearch"
+            id="doctorsearch"
+            placeholder="Ricerca per specializzazione"
+            >
+                        <router-link :to="{name:'search'}" class="btn btn-light">
                         <button class="btn btn-outline-success" type="submit">
                             Cerca
                             <font-awesome-icon
                                 icon="fa-solid fa-magnifying-glass"
                             />
                         </button>
+                        </router-link>
                     </form>
+
                 </div>
                 <div class="contain3">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -84,6 +91,7 @@
             <b> <a href="http://">Vegano</a></b>
         </div>
     </div>
+
 </template>
 
 <script>
