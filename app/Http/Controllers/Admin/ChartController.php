@@ -2,23 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Support\Facades\DB;
+use App\Order;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ChartController extends Controller
 {
-    public function getData()
+    public function index()
     {
-        $data = DB::table('orders')->select('order_date', 'total_price')->get();
-
-        $labels = $data->pluck('order_date')->toArray();
-        $values = $data->pluck('total_price')->toArray();
-
-        $chartData = [
-            'labels' => $labels,
-            'values' => $values
-        ];
-
-        return response()->json($chartData);
+        $orders = Order::where('user_id', Auth::user()->id)->get();
+    return view('admin.chart', ['orders' => $orders]);
     }
 }

@@ -10,7 +10,6 @@ import PageSearch from "./pages/PageSearch";
 
 import vueBraintree from "vue-braintree";
 Vue.use(vueBraintree);
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -31,10 +30,9 @@ const routes = [
         component: PageDish,
         props: true,
     },
-
     {
         path: "/search",
-        name: "search",
+        name: "pageSearch",
         component: PageSearch,
         props: true,
     },

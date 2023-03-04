@@ -1,190 +1,65 @@
 <template>
-    <div>
-        <div class="navvv">
-            <div class="navsup">
-                <div class="contain1">
-                    <router-link :to="{ name: 'home' }" class="navbar-brand"></router-link>
-                        <a href="http://localhost:8000/"
-                            ><img
-                                class="immaginenav"
-                                src="../../img/Risorsa-7.png"
-                                alt=""
-                        /></a>
-                    </router-link>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <router-link
-                                    :to="{ name: 'usersIndex' }"
-                                    class="nav-link"
-                                ></router-link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="contain2">
-
-                    <form class="d-flex" role="search">
-                         <input
-            type="search"
-            class="col-12 py-2 text-center my-4 rounded"
-            v-model="specialization"
-            @keyup="searchDoctors"
-            name="doctorsearch"
-            id="doctorsearch"
-            placeholder="Ricerca per specializzazione"
+    <nav class="navbar navbar-expand-lg navbar-green p-0">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="http://127.0.0.1:8000/">
+                <img src="../../img/logo.png" alt="" />
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
             >
-                        <router-link :to="{name:'search'}" class="btn btn-light">
-                        <button class="btn btn-outline-success" type="submit">
-                            Cerca
-                            <font-awesome-icon
-                                icon="fa-solid fa-magnifying-glass"
-                            />
-                        </button>
-                        </router-link>
-                    </form>
-
-                </div>
-                <div class="contain3">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item carrello">
-                            <b
-                                ><a
-                                    class="carr"
-                                    href="/login"
-                                    style="text-decoration: none"
-                                    >Carrello</a
-                                ></b
-                            >
-                        </li>
-                    </ul>
-                </div>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="http://127.0.0.1:8000/register"
+                            >Registrazione</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active-yellow"
+                            href="http://127.0.0.1:8000/login"
+                            >Login</a
+                        >
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="container categorie mt-5">
-            <b> <a href="http://">Pizza</a></b>
-            <b> <a href="http://">Messicano</a></b>
-            <b> <a href="http://">Americano</a></b>
-            <b> <a href="http://">Cinese</a></b>
-            <b> <a href="http://">Pesce</a></b>
-            <b> <a href="http://">Carne</a></b>
-            <b> <a href="http://">Italiano</a></b>
-            <b> <a href="http://">Internazionale</a></b>
-            <b> <a href="http://">Dolce</a></b>
-            <b> <a href="http://">Kebab</a></b>
-            <b> <a href="http://">Fritti</a></b>
-            <b> <a href="http://">Poke</a></b>
-            <b> <a href="http://">Vegano</a></b>
-        </div>
-    </div>
-
+    </nav>
 </template>
-
 <script>
 export default {};
 </script>
-
-<style>
-.immaginenav {
-    margin-top: -350px;
-    width: 70%;
-}
-.carrello {
-    color: black;
-    margin-top: -200px;
-}
-.carr {
-    color: black !important;
-}
-.contain1 {
-    width: 33%;
-}
-.contain2 {
-    width: 34%;
-}
-.contain3 {
-    width: 33%;
-    text-align: end;
-}
-.navvv {
-    background-image: url(/sfondo.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 70%;
-    height: 600px;
+<style lang="scss">
+img {
+    max-width: 100%;
+    height: auto;
+    width: 50%;
 }
 
-.topnav {
-    display: flex;
-    justify-content: space-between;
+.navbar-green {
+    background-color: #133846;
 }
-.navsup {
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    align-items: center;
-    margin: 0px 4.5rem;
-    padding-top: 250px;
-}
+
 .nav-link {
-    color: white !important;
+    color: white;
 }
 .nav-link:hover {
-    color: rgb(255, 0, 0) !important;
+    color: #ffac44;
 }
-
-.btn {
-    color: white !important;
-    border-color: rgb(255, 0, 0) !important;
-    background-image: linear-gradient(to right, #ff0101, #e1a900);
+.active-yellow {
+    color: #ffac44;
 }
-
-.btn:hover {
-    color: rgb(255, 0, 0) !important;
-    background: none !important;
-}
-.categorie {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.categorie a {
-    text-decoration: none;
-    font-size: 30px;
-    margin: 0 1.5rem;
-    color: black;
-}
-.categorie a:hover {
-    color: red;
-    text-decoration: underline;
-}
-.btn2 {
-    color: white !important;
-    border-color: rgb(255, 0, 0) !important;
-    background-image: linear-gradient(to right, #ff0101, #e1a900);
-    width: 100px;
-    border-radius: 10px;
-    text-align: center;
-}
-.carrello {
-    justify-content: flex-end;
-    display: flex;
+.active-yellow:hover {
+    color: white;
 }
 </style>

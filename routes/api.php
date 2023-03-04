@@ -26,6 +26,7 @@ Route::get('/users/search', 'Api\UserController@search')->name('users.search');
 Route::get('/users/{user}', 'Api\UserController@show')->name('users.show');
 Route::get('/users/{user}/dishes', 'Api\DishController@dishes')->name('users.dishes');
 
+Route::get('/users/search', 'Api\UserController@search')->name('users.search');
 
 
 Route::post('checkout','Api\UserController@checkout');
