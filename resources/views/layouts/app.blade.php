@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/back.js') }}" defer></script>
 
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -92,7 +93,7 @@
                                     <a class="dropdown-item" href="{{ route('admin.orders.index') }}">
                                        Indice
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('admin.chart.getData')  }}">
+                                    <a class="dropdown-item" href="{{ route('admin.chart')  }}">
                                         Statistiche
                                      </a>
                                 </div>

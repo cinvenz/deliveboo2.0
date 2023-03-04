@@ -1,89 +1,60 @@
 <template>
     <div>
         <NavBar />
-        <div class="container">
-            <div class="sium">
-                <div v-for="user in arrUsers" :key="user.id" class="contgen">
+        <HeroComponent />
+        <!-- Page Content-->
+        <section class="pt-5 mt-5">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
                     <router-link
-                        style="text-decoration: none"
+                        v-for="user in arrUsers"
+                        :key="user.id"
                         :to="{
                             name: 'restaurantsShow',
                             params: { id: user.id },
                         }"
+                        class="col-lg-6 col-xxl-4 mb-5"
                     >
-                        <div class="carte">
-                            <div class="cont1">
+                        <div
+                            class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0"
+                        >
+                            <div
+                                class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+                            >
+                                <i class="bi bi-collection"></i>
+                            </div>
+                            <div class="card-img-wrapper">
                                 <img
                                     :src="user.image"
-                                    class="card-img-top"
-                                    alt="..."
+                                    alt="User image"
+                                    class="card-img-top img-fluid"
                                 />
                             </div>
-                            <div class="cont2">
-                                <h4>{{ user.restaurant_name }}</h4>
-                                <p><b> Via:</b> {{ user.address }}</p>
-                                <p>
-                                    <b> Orario apertura:</b>
-                                    {{ user.opening_hours }}
-                                </p>
-                                <p>
-                                    <b> Orario chiusura:</b>
-                                    {{ user.closing_hours }}
-                                </p>
-                                <p><b>Tel:</b> {{ user.phone }}</p>
-                            </div>
+                            <h2
+                                class="fs-4 fw-bold"
+                                style="color: #333; font-size: 24px"
+                            >
+                                {{ user.restaurant_name }}
+                            </h2>
+                            <p
+                                class="mb-0"
+                                style="color: #777; font-size: 16px"
+                            >
+                                {{ user.address }}
+                            </p>
+                            <p
+                                class="mb-0"
+                                style="color: #777; font-size: 14px"
+                            >
+                                {{ user.opening_hours }} -
+                                {{ user.closing_hours }}
+                            </p>
                         </div>
                     </router-link>
                 </div>
             </div>
-
-            <div>
-                <div class="SINGUP">
-                    <h1>Do you have a restaurant?</h1>
-                    <p>Find out all the advantages of home delivery</p>
-                    <a href="/login" class="btn btn-outline-success">Sing UP</a>
-                </div>
-            </div>
-
-            <div class="pubbl">
-                <div class="primocont">
-                    <div>
-                        <img src="/servizio-a-domicilio.jpg" alt="" />
-                    </div>
-                    <div class="testo">
-                        <h4>CONSEGNE VELOCI</h4>
-                        <p>
-                            Ricevi i tuoi piatti direttammente a casa tua in
-                            tutta sicurezza e in breve tempo
-                        </p>
-                    </div>
-                </div>
-                <div class="primocont">
-                    <div>
-                        <img src="/divano.jpeg" alt="" />
-                    </div>
-                    <div class="testo">
-                        <h4>GODITI IL CIBO</h4>
-                        <p>
-                            Condividi i piatti con amici e parenti quando e dove
-                            vuoi
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="primocont contesterno">
-                <div>
-                    <img src="/ordina-ora.jpeg" alt="" />
-                </div>
-                <div class="testo">
-                    <h4>ORDINA FACILMENTE</h4>
-                    <p>
-                        Ordina i tuoi piatti preferiti in modo semplice e veloce
-                        grazie al nostro sito
-                    </p>
-                </div>
-            </div>
-        </div>
+        </section>
         <FooterComponent />
     </div>
 </template>
@@ -91,11 +62,13 @@
 <script>
 import NavBar from "../components/NavBar.vue";
 import FooterComponent from "../components/FooterComponent.vue";
+import HeroComponent from "../components/HeroComponent.vue";
 
 export default {
     name: "PageHome",
     components: {
         NavBar,
+        HeroComponent,
         FooterComponent,
     },
 
@@ -113,130 +86,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contgen {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.card-body {
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-.carte {
-    display: flex;
-    width: 600px;
-    border-radius: 4px;
-    margin: 1rem 1rem;
-    transition: all 0.2s linear;
-    box-shadow: 0 0 10px rgb(83, 85, 89);
+.card-body:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.carte:hover {
-    transform: scale(1.2);
-}
-.cont1 {
-    height: 200px;
+
+.card-img-wrapper {
+    height: 180px;
+    position: relative;
     overflow: hidden;
-    border-radius: 4px 4px 0 0;
-    width: 300px;
+    margin-bottom: 1rem;
 }
 
-.cont1 img {
-    width: 85%;
-    height: 100%;
-    object-fit: cover;
+.card-img-wrapper img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.cont2 {
-    padding: 10px;
+.card-body h2 {
+    font-size: 24px;
+    color: #333;
 }
 
-.cont2 h4 {
-    margin-top: 0;
+.card-body p {
+    font-size: 16px;
+    color: #777;
 }
 
-.cont2 p {
-    margin-bottom: 5px;
+.feature {
+    background-color: #ff6347;
 }
-
-h4 {
-    color: black;
-}
-
-p {
-    color: black;
-}
-.sium {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.SINGUP {
-    margin-top: 100px;
-    box-sizing: border-box;
-    text-align: center;
-    background-image: url("/sous-chef-significato-cosa-fa.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    height: 600px;
-}
-.SINGUP h1 {
-    font-size: 90px !important;
-    padding-top: 250px;
-    color: white;
-}
-.SINGUP p {
-    color: white;
-    font-size: 40px !important;
-}
-.SINGUP .btn {
-    color: white !important;
-    background-image: linear-gradient(to right, #ff0101, #e1a900);
-    border-radius: 5px !important;
-    width: 90px;
-    height: 40px;
-    padding-top: 0.5rem;
-}
-
-.SINGUP .btn:hover {
-    color: #ff0101;
-    background: rgb(255, 153, 0) !important;
-}
-.pubbl {
-    margin-top: 7rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: auto;
-}
-.primocont img {
-    width: 250px;
-    height: 250px;
-}
-
-.primocont {
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgb(83, 85, 89);
-    margin: 4rem 0rem;
-}
-
-.primocont h4 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.primocont p {
-    text-align: center;
-}
-.testo {
-    padding: 2rem 1rem;
-}
-.contesterno {
-    margin: auto;
-
-    margin-bottom: 3rem;
+a {
+    text-decoration: none;
 }
 </style>

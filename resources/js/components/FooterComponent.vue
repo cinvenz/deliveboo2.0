@@ -1,52 +1,131 @@
 <template>
-    <div style="background-color: #f09e75">
-        <div class="container finepag">
-            <div class="div1">
-                <h2>Social</h2>
-                <a href="http://">Facebook</a>
-                <a href="http://">Twitter</a>
-                <a href="http://">Instagram</a>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container-fluid" style="padding: 0">
+        <!-- Footer -->
+        <footer
+            class="text-center text-white"
+            style="background-color: #133846"
+        >
+            <!-- Grid container -->
+            <div class="container">
+                <!-- Section: Links -->
+                <section class="mt-5">
+                    <!-- Grid row-->
+                    <div
+                        class="row text-center d-flex justify-content-center pt-5"
+                    >
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">About us</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Products</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Awards</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Help</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2">
+                            <h6 class="text-uppercase font-weight-bold">
+                                <a href="#!" class="text-white">Contact</a>
+                            </h6>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row-->
+                </section>
+                <!-- Section: Links -->
+
+                <hr class="my-5" />
+
+                <!-- Section: Text -->
+                <section class="mb-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Sunt distinctio earum repellat
+                                quaerat voluptatibus placeat nam, commodi optio
+                                pariatur est quia magnam eum harum corrupti
+                                dicta, aliquam sequi voluptate quas.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Text -->
+
+                <!-- Section: Social -->
+                <section class="text-center mb-5">
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="text-white me-4">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </section>
+                <!-- Section: Social -->
             </div>
-            <div class="div2">
-                <h2>Contatti</h2>
-                <a
-                    href="http://www.google.it/maps/@45.5279562,9.5494161,14z%22%3E"
-                    >Via C. Boolean, 78 - Italy</a
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div
+                class="text-center p-3"
+                style="background-color: rgba(0, 0, 0, 0.2)"
+            >
+                Made with
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-suit-heart-fill"
+                    viewBox="0 0 16 16"
                 >
-                <a href="http://">+39 XXX-XXX-XXXX</a>
-                <a href="http://gmail.com/"></a>
+                    <path
+                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"
+                    />
+                </svg>
+                by Team7 #78
             </div>
-            <div class="div1">
-                <img src="/Risorsa-7.png" alt="" />
-            </div>
-        </div>
-        <div style="background-color: #fe6347; height: 2rem">
-            <p style="text-align: center; color: white">
-                Made with LOVE by Team 7 #78
-            </p>
-        </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
     </div>
+    <!-- End of .container -->
 </template>
 
-<style lang="scss" scoped>
-.finepag {
-    display: flex;
-    justify-content: space-between;
-    padding: 8rem 0;
-}
-.finepag div {
-    display: flex;
-    flex-direction: column;
-}
-.div1 {
-    width: 33%;
-}
-.div2 {
-    width: 34%;
-}
-.finepag a {
-    text-decoration: none;
-    color: red;
-    padding: 0.5rem 0;
-}
-</style>
+<style lang="scss" scoped></style>

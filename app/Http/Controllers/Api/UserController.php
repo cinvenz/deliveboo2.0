@@ -20,7 +20,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::inRandomOrder()->limit(8)->get();
+        $users = User::inRandomOrder()->limit(9)->get();
 
         return response()->json([
             'success' => true,
@@ -32,6 +32,13 @@ class UserController extends Controller
     public function show(User $user)
     {
         $users = User::all();
+
+        return response()->json([
+            'success' => true,
+            'results' => $user,
+        ]);
+
+        $user = User::where('id', $user->id)->with(['category'])->first();
 
         return response()->json([
             'success' => true,

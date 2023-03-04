@@ -6,11 +6,8 @@ import VueRouter from "vue-router"; // importazione vue-router
 import PageHome from "./pages/PageHome";
 import PageRestaurant from "./pages/PageRestaurant";
 import PageDish from "./pages/PageDish";
-import PageCart from "./pages/PageCart";
-
 import vueBraintree from "vue-braintree";
 Vue.use(vueBraintree);
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -30,11 +27,6 @@ const routes = [
         name: "dishShow",
         component: PageDish,
         props: true,
-    },
-    {
-        path: "/cart",
-        name: "cart",
-        component: PageCart,
     },
 ];
 

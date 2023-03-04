@@ -31,18 +31,8 @@ Route::middleware('auth')
         Route::get('/home', 'HomeController@index')->name('home');
         Route::resource('dishes', 'DishController');
         Route::resource('orders', 'OrderController');
-        Route::get('chart-data', 'ChartController@getData')->name('chart.getData');
-
-
+        Route::get('/chart', 'ChartController@index')->name('chart');
 });
-
-
-// Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/users/{id}', 'UserController@show')->name('user.show');
-
-
-
-
 
 
 Route::get('/{vue_capture?}', function () {
