@@ -45,7 +45,11 @@ img {
     height: auto;
     width: 50%;
 }
-
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
 .navbar-green {
     background-color: #133846;
 }

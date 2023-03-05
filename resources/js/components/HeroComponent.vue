@@ -1,17 +1,18 @@
 <template>
-    <div
-        class="jumbotron jumbotron-fluid"
-        :style="{
-            height: '100vh',
-            backgroundColor: '#323232',
-            backgroundImage:
-                'url(https://img.freepik.com/free-photo/female-chef-adding-sauce-dish_23-2148763222.jpg?w=2000&t=st=1677928796~exp=1677929396~hmac=030ceab079b2b55bd4354be8cedc52338247747ba950a89dfdb2751a99dddf5b)',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-        }"
-    >
-        <div class="container text-white">
+    <div class="jumbo-container">
+        <div
+            class="jumbotron jumbotron-fluid"
+            :style="{
+                height: '100vh',
+                backgroundColor: '#323232',
+                backgroundImage:
+                    'url(https://img.freepik.com/free-photo/female-chef-adding-sauce-dish_23-2148763222.jpg?w=1060&t=st=1677947528~exp=1677948128~hmac=5370c468e6e3d7bdc2fb386045a41c6b5a5dab0ba475909d0994a96f36b9d9f5)',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+            }"
+        ></div>
+        <div class="container text-white cerca">
             <h1 class="display-4">Cerca i tuoi ristoranti preferiti</h1>
             <router-link :to="{ name: 'pageSearch' }">
                 <button class="button-86" role="button">Cerca</button>
@@ -32,6 +33,16 @@ export default {};
     align-items: center;
     height: 100%;
     text-align: center; /* center the text horizontally */
+    position: absolute;
+    inset: 0;
+}
+.jumbo-container {
+    background-color: black;
+    position: relative;
+}
+
+.jumbotron {
+    opacity: 0.5;
 }
 a {
     text-decoration: none;
