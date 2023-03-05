@@ -1,144 +1,43 @@
 <template>
-    <div v-if="objRestaurant && arrDishes">
-        <h1>{{ objRestaurant.restaurant_name }}</h1>
-        <h2>Telefono: {{ objRestaurant.phone }}</h2>
-
-        <img
-            :src="objRestaurant.image"
-            :alt="objRestaurant.restaurant_name"
-            class="card-img-top"
-        />
-        <p>{{ objRestaurant.address }}</p>
-
-        <!-- Menu Piatti  -->
-
-        <div
-            class="card"
-            style="width: 18rem"
-            v-for="dish in arrDishes"
-            :key="dish.id"
+    <div>
+        <NavBar />
+        <!-- <div
+            v-if="objRestaurant && arrDishes"
+            class="jumbotron jumbotron-fluid position-relative"
         >
-            <router-link
-                :to="{
-                    name: 'dishShow',
-                    params: { id: dish.id, dish: dish },
-                }"
+            <img
+                :src="objRestaurant.image"
+                :alt="objRestaurant.restaurant_name"
+                class="img-fluid mx-auto d-block"
+                style="max-width: 100%; height: auto; object-fit: cover"
+            />
+
+            <div
+                class="container position-absolute top-50 start-50 translate-middle"
             >
-                <img
-                    :src="dish.image"
-                    :alt="dish.dish_name"
-                    class="card-img-top"
-                />
-            </router-link>
-
-            <div class="card-body">
-                <h5 class="card-title">{{ dish.dish_name }}</h5>
-                <p class="card-text">
-                    {{ dish.price }}
-                </p>
-                <button @click="addToCart(dish)" class="btn btn-primary">
-                    Add to cart
-                </button>
+                <h1 class="display-4 text-center">
+                    {{ objRestaurant.restaurant_name }}
+                </h1>
+                <p class="lead text-center">{{ objRestaurant.address }}</p>
             </div>
-        </div>
-
-        <!-- Checkout -->
-        <div class="col-12 col-md-4">
-            <div class="container">
-                <h2 class="mb-4">Carrello</h2>
-                <table class="table mb-4" v-if="cart.length > 0">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Prezzo</th>
-                            <th scope="col">Rimuovi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(dish, index) in cart" :key="index">
-                            <td>{{ dish.dish_name }}</td>
-                            <td>{{ dish.price }}</td>
-                            <td>
-                                <button
-                                    class="btn btn-sm btn-danger"
-                                    @click="removeFromCart(dish)"
-                                >
-                                    Rimuovi
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Totale</th>
-                            <td>{{ totalTwoDecimals }}</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!--  -->
-                <div v-if="cart.length > 0">
-                    <h3>Checkout</h3>
-                    <input
-                        class="form-control mb-2"
-                        type="text"
-                        v-model="userName"
-                        placeholder="Nome*"
-                        required
-                    />
-                    <input
-                        class="form-control mb-2"
-                        type="text"
-                        v-model="userSurname"
-                        placeholder="Cognome*"
-                        required
-                    />
-                    <input
-                        class="form-control mb-2"
-                        type="text"
-                        v-model="userIndirizzo"
-                        placeholder="Indirizzo*"
-                        required
-                    />
-                    <input
-                        class="form-control mb-2"
-                        type="text"
-                        v-model="userTelefono"
-                        placeholder="Numero di telefono*"
-                        @keyup="validatePhone(userTelefono)"
-                        required
-                    />
-                    <small
-                        class="text-danger"
-                        v-if="validatePhoneMessage == 'Numero non valido'"
-                    >
-                        {{ validatePhoneMessage }}
-                    </small>
-                    <input
-                        class="form-control mb-2"
-                        type="text"
-                        v-model="userEmail"
-                        placeholder="Email*"
-                        required
-                        @keyup="validateEmail(userEmail)"
-                    />
-                    <small
-                        class="text-danger"
-                        v-if="validateEmailMessage == 'Email non valida'"
-                    >
-                        {{ validateEmailMessage }}
-                    </small>
-                    <v-braintree
-                        authorization="sandbox_pgksqfzg_dhs5g79tpt93p3k8"
-                        locale="it_IT"
-                        btnText="Ordina"
-                        @success="onSuccess"
-                        @error="onError"
-                    ></v-braintree>
-                </div>
-                <div v-if="responseMessage && cart.length == 0">
-                    <p class="text-success font-weight-bold">
-                        {{ responseMessage }}
-                    </p>
-                </div>
+        </div> -->
+        <div
+            class="jumbotron jumbotron-fluid position-relative"
+            v-if="objRestaurant && arrDishes"
+        >
+            <img
+                :src="objRestaurant.image"
+                class="card-img-top"
+                :alt="objRestaurant.restaurant_name"
+            />
+            <div
+                class="container position-absolute top-50 start-50 translate-middle"
+            >
+                <h1 class="display-4 text-center">
+                    {{ objRestaurant.restaurant_name }}
+                </h1>
+                <h4 class="lead text-center">{{ objRestaurant.address }}</h4>
+                <p class="lead text-center">{{ objRestaurant.phone }}</p>
             </div>
         </div>
     </div>
@@ -146,8 +45,13 @@
 
 <script>
 import axios from "axios";
+import NavBar from "../components/NavBar.vue";
 
 export default {
+    name: "PageRestaurant",
+    components: {
+        NavBar,
+    },
     props: ["id"],
     data() {
         return {
@@ -225,7 +129,7 @@ export default {
             let message = error.message;
         },
         validateEmail(value) {
-            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+            if (/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(value)) {
                 this.validateEmailMessage = "Email valida";
             } else {
                 this.validateEmailMessage = "Email non valida";
@@ -283,3 +187,21 @@ export default {
     },
 };
 </script>
+<style scoped>
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+.jumbotron .card-img-top {
+    max-width: 100%;
+    max-height: 400px; /* imposta un'altezza massima di 400px */
+    margin: 0 auto;
+    object-fit: cover; /* evita che l'immagine si deformi */
+}
+
+.container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>

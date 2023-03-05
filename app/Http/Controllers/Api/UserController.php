@@ -22,13 +22,13 @@ class UserController extends Controller
     {
         // $users = User::inRandomOrder()->limit(8)->get();
 
-        $users = User::select('users.*')
+        $users = User::select('users.*')->inRandomOrder()
             ->with('categories')
             ->join('category_user','category_user.user_id','=','users.id')
             ->join('categories','categories.id','=','category_user.category_id')
 
             ->orderBy('categories.id')
-            ->limit(8)
+            ->limit(9)
             ->get();
 
         return response()->json([
