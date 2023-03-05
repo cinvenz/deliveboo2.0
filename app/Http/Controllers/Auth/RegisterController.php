@@ -83,11 +83,11 @@ class RegisterController extends Controller
             'closing_hours' => $data['closing_hours'],
         ]);
 
-        // $user->categories()->sync($data['category_id']);
+        $user->categories()->attach($data['category_id']);
 
-        if(isset($data['category_id'])) {
-            $user->categories()->sync($data['category_id']);
-        }
+        // if(isset($data['category_id'])) {
+        //     $user->categories()->sync($data['category_id']);
+        // }
 
 
         return $user;
