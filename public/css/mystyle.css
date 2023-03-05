@@ -1,0 +1,16 @@
+.navbar-green {
+    background-color: #133846;
+    height: 85px;
+}
+.nav-link {
+    color: white;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: 50%;
+}
+
+.nav-right {
+    padding-left: 80% !important;
+}

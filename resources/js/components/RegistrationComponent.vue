@@ -19,7 +19,7 @@
                         Scopri tutti i vantaggi della consegna a domicilio!
                     </h4>
                     <a
-                        class="btn btn-outline-light btn-lg"
+                        class="btn btn-outline-light btn-lg mb-2"
                         href="http://127.0.0.1:8000/register"
                         role="button"
                         >Registrati</a

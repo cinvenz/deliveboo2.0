@@ -7,6 +7,7 @@ import PageHome from "./pages/PageHome";
 import PageRestaurant from "./pages/PageRestaurant";
 import PageDish from "./pages/PageDish";
 import PageSearch from "./pages/PageSearch";
+import PageAbout from "./pages/PageAbout";
 
 import vueBraintree from "vue-braintree";
 Vue.use(vueBraintree);
@@ -34,6 +35,12 @@ const routes = [
         path: "/search",
         name: "pageSearch",
         component: PageSearch,
+        props: true,
+    },
+    {
+        path: "/about",
+        name: "pageAbout",
+        component: PageAbout,
         props: true,
     },
 ];

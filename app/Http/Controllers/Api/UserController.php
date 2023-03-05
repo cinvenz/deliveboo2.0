@@ -159,7 +159,7 @@ class UserController extends Controller
             Mail::to($request->userEmail)->send(new SendEmailUser($currentOrder, $restaurant));
 
             return response()->json([
-                'message' => 'Transazione andata a buon fine. Controlla la tua mail per il riepilogo. ID: ' . $transaction->id,
+                'message' => 'Transazione andata a buon fine. Controlla la tua mail per il riepilogo. CODICE TRANSAZIONE: ' . $transaction->id,
             ]);
         } else {
             return response()->json([

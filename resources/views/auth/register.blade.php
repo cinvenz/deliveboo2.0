@@ -109,7 +109,7 @@
                             <div class="col-md-6">
                               @foreach($categories as $category)
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="categoryid[]" value="{{ $category->id }}" id="category{{ $category->id }}">
+                                  <input class="form-check-input" type="checkbox" name="category_id[]" value="{{ $category->id }}" id="category{{ $category->id }}">
                                   <label class="form-check-label" for="category_{{ $category->id }}">
                                     {{ ucfirst($category->name) }}
                                   </label>
