@@ -57,6 +57,7 @@
                 </div>
             </div>
         </section>
+        <RegistrationComponent />
         <FooterComponent />
     </div>
 </template>
@@ -65,6 +66,7 @@
 import NavBar from "../components/NavBar.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 import HeroComponent from "../components/HeroComponent.vue";
+import RegistrationComponent from "../components/RegistrationComponent.vue";
 
 export default {
     name: "PageHome",
@@ -72,6 +74,7 @@ export default {
         NavBar,
         HeroComponent,
         FooterComponent,
+        RegistrationComponent,
     },
 
     data() {

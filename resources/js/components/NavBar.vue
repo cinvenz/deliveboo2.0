@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-green p-0">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-green p-0">
         <div class="container px-lg-5">
             <a class="navbar-brand" href="http://127.0.0.1:8000/">
                 <img src="../../img/logo.png" alt="" />
@@ -28,8 +28,8 @@
                         <a
                             class="nav-link active-yellow"
                             href="http://127.0.0.1:8000/login"
-                            >Login</a
-                        >
+                            >Login
+                        </a>
                     </li>
                 </ul>
             </div>

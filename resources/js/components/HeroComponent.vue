@@ -33,9 +33,10 @@ export default {};
     height: 100%;
     text-align: center; /* center the text horizontally */
 }
-a{
-    u
+a {
+    text-decoration: none;
 }
+
 @media (max-width: 768px) {
     /* adjust the font size for smaller screens */
     .container {
