@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar sticky-top navbar-expand-lg navbar-green p-0">
         <div class="container px-lg-5">
-            <a class="navbar-brand" href="http://127.0.0.1:8000/">
+            <a class="navbar-brand" href="http://localhost:8000/">
                 <img src="../../img/logo.png" alt="" />
             </a>
             <button
@@ -20,14 +20,14 @@
                     <li class="nav-item">
                         <a
                             class="nav-link"
-                            href="http://127.0.0.1:8000/register"
+                            href="http://localhost:8000/register"
                             >Registrazione</a
                         >
                     </li>
                     <li class="nav-item">
                         <a
                             class="nav-link active-yellow"
-                            href="http://127.0.0.1:8000/login"
+                            href="http://localhost:8000/login"
                             >Login
                         </a>
                     </li>

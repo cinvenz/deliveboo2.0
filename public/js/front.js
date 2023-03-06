@@ -3965,7 +3965,7 @@ var staticRenderFns = [function () {
   }, [_c("a", {
     staticClass: "navbar-brand",
     attrs: {
-      href: "http://127.0.0.1:8000/"
+      href: "http://localhost:8000/"
     }
   }, [_c("img", {
     attrs: {
@@ -3996,14 +3996,14 @@ var staticRenderFns = [function () {
   }, [_c("a", {
     staticClass: "nav-link",
     attrs: {
-      href: "http://127.0.0.1:8000/register"
+      href: "http://localhost:8000/register"
     }
   }, [_vm._v("Registrazione")])]), _vm._v(" "), _c("li", {
     staticClass: "nav-item"
   }, [_c("a", {
     staticClass: "nav-link active-yellow",
     attrs: {
-      href: "http://127.0.0.1:8000/login"
+      href: "http://localhost:8000/login"
     }
   }, [_vm._v("Login\n                    ")])])])])])]);
 }];
@@ -4059,7 +4059,7 @@ var staticRenderFns = [function () {
   }, [_vm._v("\n                    Scopri tutti i vantaggi della consegna a domicilio!\n                ")]), _vm._v(" "), _c("a", {
     staticClass: "btn btn-outline-light btn-lg mb-2",
     attrs: {
-      href: "http://127.0.0.1:8000/register",
+      href: "http://localhost:8000/register",
       role: "button"
     }
   }, [_vm._v("Registrati")])])])]);
@@ -37616,7 +37616,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.jumbotron[data-v-82a60216] {\n    position: relative;\n    overflow: hidden;\n}\n.jumbotron .card-img-top[data-v-82a60216] {\n    max-width: 100%;\n    max-height: 400px; /* imposta un'altezza massima di 400px */\n    margin: 0 auto;\n    -o-object-fit: cover;\n       object-fit: cover; /* evita che l'immagine si deformi */\n}\n.container[data-v-82a60216] {\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n.__area[data-v-82a60216] {\n    font-family: \"Cairo\", sans-serif;\n    color: #7c7671;\n    margin-top: 100px;\n}\n.__card[data-v-82a60216] {\n    max-width: 350px;\n    margin: 1rem 0 1rem;\n    cursor: pointer;\n    position: relative;\n    display: inline-block;\n    color: unset;\n    text-decoration: none;\n}\n.__card[data-v-82a60216]:hover {\n    color: unset;\n}\n.__img[data-v-82a60216] {\n    border-radius: 10px;\n}\n.__card_detail[data-v-82a60216] {\n    box-shadow: 0 4px 15px rgba(175, 77, 0, 0.13);\n    padding: 13px;\n    border-radius: 8px;\n    margin: -30px 10px 0;\n    position: relative;\n    z-index: 2;\n    background-color: #fff;\n}\n.__card_detail[data-v-82a60216]:hover {\n    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;\n}\n.__card_detail h4[data-v-82a60216] {\n    color: #474340;\n    line-height: 100%;\n    font-weight: bold;\n}\n.__card_detail p[data-v-82a60216] {\n    font-size: 13px;\n    font-weight: bold;\n    margin-bottom: 0.4rem;\n}\n.__type span[data-v-82a60216] {\n    background-color: #feefe3;\n    padding: 5px 10px 7px;\n    border-radius: 5px;\n    display: inline-block;\n    margin-right: 10px;\n    font-size: 12px;\n    color: #fc9d52;\n    font-weight: bold;\n    line-height: 100%;\n}\n.__detail[data-v-82a60216] {\n    margin-top: 15px;\n}\n.button-57[data-v-82a60216] {\n    position: relative;\n    overflow: hidden;\n    border: 1px solid #474340;\n    border-radius: 3px;\n    color: #474340;\n    display: inline-block;\n    font-size: 15px;\n    line-height: 15px;\n    padding: 10px 10px 10px;\n    text-decoration: none;\n    cursor: pointer;\n    background: #fff;\n    -moz-user-select: none;\n         user-select: none;\n    -webkit-user-select: none;\n    touch-action: manipulation;\n}\n.button-57 span[data-v-82a60216]:first-child {\n    position: relative;\n    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);\n    z-index: 10;\n}\n.button-57 span[data-v-82a60216]:last-child {\n    color: white;\n    display: block;\n    position: absolute;\n    bottom: 0;\n    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);\n    z-index: 100;\n    opacity: 0;\n    top: 50%;\n    left: 50%;\n    transform: translateY(225%) translateX(-50%);\n    height: 14px;\n    line-height: 13px;\n}\n.button-57[data-v-82a60216]:after {\n    content: \"\";\n    position: absolute;\n    bottom: -50%;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #133846;\n    transform-origin: bottom center;\n    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);\n    transform: skewY(9.3deg) scaleY(0);\n    z-index: 50;\n}\n.button-57[data-v-82a60216]:hover:after {\n    transform-origin: bottom center;\n    transform: skewY(9.3deg) scaleY(2);\n}\n.button-57:hover span[data-v-82a60216]:last-child {\n    transform: translateX(-50%) translateY(-100%);\n    opacity: 1;\n    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);\n}\na[data-v-82a60216] {\n    text-decoration: none;\n    color: #133846;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.jumbotron[data-v-82a60216] {\r\n    position: relative;\r\n    overflow: hidden;\n}\n.jumbotron .card-img-top[data-v-82a60216] {\r\n    max-width: 100%;\r\n    max-height: 400px; /* imposta un'altezza massima di 400px */\r\n    margin: 0 auto;\r\n    -o-object-fit: cover;\r\n       object-fit: cover; /* evita che l'immagine si deformi */\n}\n.container[data-v-82a60216] {\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\n}\n.__area[data-v-82a60216] {\r\n    font-family: \"Cairo\", sans-serif;\r\n    color: #7c7671;\r\n    margin-top: 100px;\n}\n.__card[data-v-82a60216] {\r\n    max-width: 350px;\r\n    margin: 1rem 0 1rem;\r\n    cursor: pointer;\r\n    position: relative;\r\n    display: inline-block;\r\n    color: unset;\r\n    text-decoration: none;\n}\n.__card[data-v-82a60216]:hover {\r\n    color: unset;\n}\n.__img[data-v-82a60216] {\r\n    border-radius: 10px;\n}\n.__card_detail[data-v-82a60216] {\r\n    box-shadow: 0 4px 15px rgba(175, 77, 0, 0.13);\r\n    padding: 13px;\r\n    border-radius: 8px;\r\n    margin: -30px 10px 0;\r\n    position: relative;\r\n    z-index: 2;\r\n    background-color: #fff;\n}\n.__card_detail[data-v-82a60216]:hover {\r\n    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;\n}\n.__card_detail h4[data-v-82a60216] {\r\n    color: #474340;\r\n    line-height: 100%;\r\n    font-weight: bold;\n}\n.__card_detail p[data-v-82a60216] {\r\n    font-size: 13px;\r\n    font-weight: bold;\r\n    margin-bottom: 0.4rem;\n}\n.__type span[data-v-82a60216] {\r\n    background-color: #feefe3;\r\n    padding: 5px 10px 7px;\r\n    border-radius: 5px;\r\n    display: inline-block;\r\n    margin-right: 10px;\r\n    font-size: 12px;\r\n    color: #fc9d52;\r\n    font-weight: bold;\r\n    line-height: 100%;\n}\n.__detail[data-v-82a60216] {\r\n    margin-top: 15px;\n}\n.button-57[data-v-82a60216] {\r\n    position: relative;\r\n    overflow: hidden;\r\n    border: 1px solid #474340;\r\n    border-radius: 3px;\r\n    color: #474340;\r\n    display: inline-block;\r\n    font-size: 15px;\r\n    line-height: 15px;\r\n    padding: 10px 10px 10px;\r\n    text-decoration: none;\r\n    cursor: pointer;\r\n    background: #fff;\r\n    -moz-user-select: none;\r\n         user-select: none;\r\n    -webkit-user-select: none;\r\n    touch-action: manipulation;\n}\n.button-57 span[data-v-82a60216]:first-child {\r\n    position: relative;\r\n    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);\r\n    z-index: 10;\n}\n.button-57 span[data-v-82a60216]:last-child {\r\n    color: white;\r\n    display: block;\r\n    position: absolute;\r\n    bottom: 0;\r\n    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);\r\n    z-index: 100;\r\n    opacity: 0;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translateY(225%) translateX(-50%);\r\n    height: 14px;\r\n    line-height: 13px;\n}\n.button-57[data-v-82a60216]:after {\r\n    content: \"\";\r\n    position: absolute;\r\n    bottom: -50%;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #133846;\r\n    transform-origin: bottom center;\r\n    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);\r\n    transform: skewY(9.3deg) scaleY(0);\r\n    z-index: 50;\n}\n.button-57[data-v-82a60216]:hover:after {\r\n    transform-origin: bottom center;\r\n    transform: skewY(9.3deg) scaleY(2);\n}\n.button-57:hover span[data-v-82a60216]:last-child {\r\n    transform: translateX(-50%) translateY(-100%);\r\n    opacity: 1;\r\n    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);\n}\na[data-v-82a60216] {\r\n    text-decoration: none;\r\n    color: #133846;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
