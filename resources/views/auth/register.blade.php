@@ -90,20 +90,6 @@
                             </div>
                         </div>
 
-                        {{-- <div class="form-group row mb-3">
-                            <label for="category_id" class="col-md-4 col-form-label text-md-right">{{ __('Categoria') }}</label>
-                            <div class="col-md-6">
-                                <select id="category_id" name="category_id[]" required multiple="multiple" style="width: 250px; height: 150px">
-                                    @foreach($categories as $category)
-                                        <option value="{{ $category->id }}">{{ ucfirst($category->name) }}</option>
-                                    @endforeach
-                                </select>
-                                <p style="font-size: 12px">*Per selezionare più categorie tieni premuto "Ctrl".</p>
-                            </div>
-                        </div>
-
-                        <h3>Campi facoltativi:</h3> --}}
-
                         <div class="form-group row mb-3">
                             <label for="category_id" class="col-md-4 col-form-label text-md-right">{{ __('Categoria') }}</label>
                             <div class="col-md-6">
@@ -132,20 +118,22 @@
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="form-group row mb-3">
-                            <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Foto ristorante') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" autocomplete="image" autofocus>
-
+                        <div class="form-group mb-3 d-flex">
+                            <label for="image" class="col-md-4 col-form-label text-md-right"> URL immagine </label>
+                            <div class="col-md-6 px-2">
+                            <input type="url" class=" form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{ old('image') }}">
+                            </div>
+                            <div class="invalid-feedback">
                                 @error('image')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                    <ul>
+                                        @foreach ($errors->get('image') as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
                                 @enderror
                             </div>
                         </div>
+
 
                         <div class="form-group row mb-3">
                             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Telefono') }}</label>

@@ -132,7 +132,7 @@ return [
      ],
      [
         'name' => 'Materiaprima',
-        'img' => 'https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/326005626_911243246559962_3841272248665305125_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=mpkvuDtWyrcAX_AGYrG&_nc_ht=scontent-fco2-1.xx&oh=00_AfBtakEdU7RxwgRqHOLB-zcvY7kuzgTa61Cf_M1s8m8Q4Q&oe=63FC9077',
+        'img' => 'https://mazzetti.it/wp-content/uploads/2018/08/CantineAperte2018_024.jpg',
      ],
      [
         'name' => 'Atelier Restaurant',
