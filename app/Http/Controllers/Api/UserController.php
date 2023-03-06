@@ -59,32 +59,6 @@ class UserController extends Controller
         ]);
     }
 
-    //  public function search(Request $request)
-    // {
-    //     $query = User::query();
-    //         // Verifica se è stata fornita una specializzazione
-    //     if ($request->has('category')) {
-    //         $category = $request->input('category');
-    //         // Filtra i dottori in base alla specializzazione
-    //         $query->whereHas('categories', function($q) use ($category) {
-    //             $q->where('name', "%{$category}%");
-    //         });
-    //     }
-    //     // Recupera tutti i dottori con le rispettive specializzazioni
-    //     $users =$query->select('users.*')
-    //     ->with(['categories'])
-    //     ->leftJoin('category_user', 'category_user.user_id', '=', 'users.id')
-    //     ->leftJoin('categories','categories.id','=','category_user.category_id')
-    //     // ->orderByRaw("CASE WHEN expiring_date > NOW() THEN 0 ELSE 1 END ASC")
-    //     ->orderBy('categories.id', 'desc')
-    //     ->get();
-    //     // Restituisci i dati in formato JSON
-    //     return response()->json([
-    //         'success' => true,
-    //         'results' => $users
-    //     ]);
-    // }
-
  public function search(Request $request)
     {
         $query = User::query();

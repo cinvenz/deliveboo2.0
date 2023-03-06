@@ -2,6 +2,7 @@
     <div>
         <NavBar />
         <div>
+            <h2 class="title">Cerca la tipologia del ristorante tra:</h2>
             <div class="d-flex justify-content-center">
                 <div class="search-bar-div d-flex pt-3 ps-3">
                     <input
@@ -15,6 +16,10 @@
                     </button>
                 </div>
             </div>
+            <h6 class="typologie">
+                Pizza, Messicano, Americano, Cinese, Pesce, Carne, Italiano,
+                Internazionale, Dolce, Kebab, Fritti, Poke, Vegano
+            </h6>
             <section class="pt-5 mt-2 searchpage">
                 <div v-if="isFiltered">
                     <div class="container px-lg-5">
@@ -192,5 +197,15 @@ a {
 
 .search-bar-div {
     width: 20rem;
+}
+.title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1.5em;
+}
+.typologie {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.8em;
 }
 </style>

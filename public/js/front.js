@@ -4660,7 +4660,9 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("NavBar"), _vm._v(" "), _c("div", [_c("div", {
+  return _c("div", [_c("NavBar"), _vm._v(" "), _c("div", [_c("h2", {
+    staticClass: "title"
+  }, [_vm._v("Cerca la tipologia del ristorante tra:")]), _vm._v(" "), _c("div", {
     staticClass: "d-flex justify-content-center"
   }, [_c("div", {
     staticClass: "search-bar-div d-flex pt-3 ps-3"
@@ -4693,7 +4695,9 @@ var render = function render() {
     on: {
       click: _vm.search
     }
-  }, [_vm._v("\n                    Search\n                ")])])]), _vm._v(" "), _c("section", {
+  }, [_vm._v("\n                    Search\n                ")])])]), _vm._v(" "), _c("h6", {
+    staticClass: "typologie"
+  }, [_vm._v("\n            Pizza, Messicano, Americano, Cinese, Pesce, Carne, Italiano,\n            Internazionale, Dolce, Kebab, Fritti, Poke, Vegano\n        ")]), _vm._v(" "), _c("section", {
     staticClass: "pt-5 mt-2 searchpage"
   }, [_vm.isFiltered ? _c("div", [_c("div", {
     staticClass: "container px-lg-5"
@@ -37588,7 +37592,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".card-body[data-v-7bf8bbe0] {\n  position: relative;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n  padding: 20px;\n}\n.card-body[data-v-7bf8bbe0]:hover {\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n}\n.card-img-wrapper[data-v-7bf8bbe0] {\n  height: 180px;\n  position: relative;\n  overflow: hidden;\n  margin-bottom: 1rem;\n}\n.card-img-wrapper img[data-v-7bf8bbe0] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 100%;\n  max-height: 100%;\n}\n.card-body h2[data-v-7bf8bbe0] {\n  font-size: 24px;\n  color: #333;\n}\n.card-body p[data-v-7bf8bbe0] {\n  font-size: 16px;\n  color: #777;\n}\n.feature[data-v-7bf8bbe0] {\n  background-color: #ff6347;\n}\na[data-v-7bf8bbe0] {\n  text-decoration: none;\n}\n.searchpage[data-v-7bf8bbe0] {\n  min-height: 50vh;\n}\n.btn[data-v-7bf8bbe0] {\n  color: white !important;\n  border: 3px double white;\n  background-image: linear-gradient(to right, #133846, #133850);\n}\n.btn[data-v-7bf8bbe0]:hover {\n  color: #133846 !important;\n  border: 3px double white;\n  background: #5f9ea0 !important;\n  transition: 0.6s;\n}\n.search-bar-div[data-v-7bf8bbe0] {\n  width: 20rem;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".card-body[data-v-7bf8bbe0] {\n  position: relative;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n  padding: 20px;\n}\n.card-body[data-v-7bf8bbe0]:hover {\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n}\n.card-img-wrapper[data-v-7bf8bbe0] {\n  height: 180px;\n  position: relative;\n  overflow: hidden;\n  margin-bottom: 1rem;\n}\n.card-img-wrapper img[data-v-7bf8bbe0] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  max-width: 100%;\n  max-height: 100%;\n}\n.card-body h2[data-v-7bf8bbe0] {\n  font-size: 24px;\n  color: #333;\n}\n.card-body p[data-v-7bf8bbe0] {\n  font-size: 16px;\n  color: #777;\n}\n.feature[data-v-7bf8bbe0] {\n  background-color: #ff6347;\n}\na[data-v-7bf8bbe0] {\n  text-decoration: none;\n}\n.searchpage[data-v-7bf8bbe0] {\n  min-height: 50vh;\n}\n.btn[data-v-7bf8bbe0] {\n  color: white !important;\n  border: 3px double white;\n  background-image: linear-gradient(to right, #133846, #133850);\n}\n.btn[data-v-7bf8bbe0]:hover {\n  color: #133846 !important;\n  border: 3px double white;\n  background: #5f9ea0 !important;\n  transition: 0.6s;\n}\n.search-bar-div[data-v-7bf8bbe0] {\n  width: 20rem;\n}\n.title[data-v-7bf8bbe0] {\n  text-align: center;\n  font-size: 1.5em;\n  margin-top: 1.5em;\n}\n.typologie[data-v-7bf8bbe0] {\n  text-align: center;\n  margin-top: 1em;\n  font-size: 0.8em;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
